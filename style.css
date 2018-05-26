@@ -42,7 +42,7 @@ header {
 
 .title {
   transition-property: all;
-  transition-duration: 0.5s;
+  transition-duration: 0.4s;
   font-size: 100px;
   color: white;
   opacity: 1;
@@ -52,7 +52,7 @@ header {
 }
 .title:hover {
   transition-property: all;
-  transition-duration: 0.5s;
+  transition-duration: 0.4s;
   font-size: 120px;
 }
 

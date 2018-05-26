@@ -20,4 +20,5 @@ $signup = mysqli_query($mysqli, "INSERT INTO account (id, pw) VALUES ('$id', '$p
 if ($signup) {
   echo "sign up success";
 }
+header('Location: index.html');
 ?>

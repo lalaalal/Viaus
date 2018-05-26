@@ -15,8 +15,8 @@ if (!isset($_SESSION['userid'])) {
     <header>
       <h1 class="title" onclick="hide_signin_area()">VIAUS</h1>
       <nav>
-        <input type="button" class="link" value="About" onclick="toggle_signin_area()">
-        <input type="button" class="link" value="Sign Out" onclick="location.href='index.html';">
+        <input type="button" class="link" value="About">
+        <input type="button" class="link" value="Sign Out" onclick="location.href='sign_out.php';">
       </nav>
     </header>
   </body>

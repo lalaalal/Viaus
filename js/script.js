@@ -6,6 +6,7 @@ function toggle_signin_area() {
     if (signup_toggle == true) toggle_signup_area();
     document.getElementsByTagName('form')[0].style.height='77px';
     signin_toggle = true;
+    setTimeout(function() {document.getElementsByName('id')[0].focus();}, 700);
   } else {
     document.getElementsByTagName('form')[0].style.height='0';
     signin_toggle = false;
@@ -17,6 +18,7 @@ function toggle_signup_area() {
     if (signin_toggle == true) toggle_signin_area();
     document.getElementsByTagName('form')[1].style.height='77px';
     signup_toggle = true;
+    setTimeout(function() {document.getElementsByName('id')[1].focus();}, 700);
   } else {
     document.getElementsByTagName('form')[1].style.height='0';
     signup_toggle = false;

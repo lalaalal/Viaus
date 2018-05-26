@@ -18,7 +18,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(images/bg.jpg);
+  background-image: url(../images/bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -125,6 +125,8 @@ nav {
   background-color: black;
   font-size: 20px;
   user-select: none;
+  text-align: center;
+  width: 103px;
 }
 .sign .submit:hover {
   transition-property: all;

@@ -8,16 +8,16 @@
   <body>
     <header>
       <h1 class="title" onclick="hide_signin_area()">VIAUS</h1>
-      <form class="sign" action="sign_in.php" method="post">
+      <form class="sign" action="index.html" method="post">
         <div class="input_area">
-          <input type="text" name="id" placeholder="Your ID" autocomplete="off">
+          <input type="text" name="id" placeholder="Your ID" autofocus autocomplete="off">
           <input type="password" name="pw" placeholder="Your PW" autocomplete="off">
         </div>
         <input type="submit" class="submit" value="SIGN IN">
       </form>
-      <form class="sign" action="sign_up.php" method="post">
+      <form class="sign" action="index.html" method="post">
         <div class="input_area">
-          <input type="text" name="id" placeholder="Your ID" autocomplete="off">
+          <input type="text" name="id" placeholder="Your ID" autofocus autocomplete="off">
           <input type="password" name="pw" placeholder="Your PW" autocomplete="off">
         </div>
         <input type="submit" class="submit" value="SIGN UP">
@@ -29,26 +29,26 @@
     </header>
   </body>
   <script type="text/javascript">
-    var signin_toggle = false;
-    var signup_toggle = true;
+    var signin_toggle = 0;
+    var signup_toggle = 0;
     function toggle_signin_area() {
-      if (signin_toggle == false) {
-        if (signup_toggle == true) toggle_signup_area();
-        document.getElementsByTagName('form')[0].style.height='76px';
-        signin_toggle = true;
+      if (signin_toggle == 0) {
+        document.getElementsByTagName('form')[0].style.height='77px';
+        signin_toggle = 1;
+        if (signup_toggle == 1) toggle_signup_area();
       } else {
         document.getElementsByTagName('form')[0].style.height='0';
-        signin_toggle = false;
+        signin_toggle = 0;
       }
     }
     function toggle_signup_area() {
-      if (signup_toggle == false) {
-        if (signin_toggle == true) toggle_signin_area();
-        document.getElementsByTagName('form')[1].style.height='76px';
-        signup_toggle = true;
+      if (signup_toggle == 0) {
+        document.getElementsByTagName('form')[1].style.height='77px';
+        signup_toggle = 1;
+        if (signin_toggle == 1) toggle_signin_area();
       } else {
         document.getElementsByTagName('form')[1].style.height='0';
-        signup_toggle = false;
+        signup_toggle = 0;
       }
     }
     function hide_signin_area() {

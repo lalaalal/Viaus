@@ -14,8 +14,7 @@ if ($result->num_rows==1)
     header('Location: main.php');
   } else {
     echo "session failed";
+    header('Location: index.html');
   }
 }
-
-header('Location: main.php');
 ?>

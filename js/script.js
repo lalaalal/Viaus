@@ -46,9 +46,7 @@ function submit_fade() {
   if (document.getElementsByTagName('form').length != 0) {
     hide_sign_area();
   }
-  setTimeout(function()
-  {document.getElementsByClassName('link')[0].style.opacity='0';
-  document.getElementsByClassName('link')[1].style.opacity='0';}, 300);
+  document.getElementsByTagName('nav')[0].style.opacity='0';
 }
 
 function onload_fade() {

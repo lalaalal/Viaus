@@ -25,9 +25,33 @@ function toggle_signup_area() {
   }
 }
 
-function hide_signin_area() {
+function hide_sign_area() {
   document.getElementsByTagName('form')[0].style.height='0';
   document.getElementsByTagName('form')[1].style.height='0';
   signin_toggle = false;
   signup_toggle = false;
+}
+
+function resize_comment() {
+  if (document.getElementsByClassName('comment')[0].style.height == 0) {
+    document.getElementsByClassName('comment')[0].style.height='28px';
+    onload_fade();
+  } else {
+    document.getElementsByClassName('comment')[0].style.height='0';
+    submit_fade();
+  }
+}
+
+function submit_fade() {
+  if (document.getElementsByTagName('form').length != 0) {
+    hide_sign_area();
+  }
+  setTimeout(function()
+  {document.getElementsByClassName('link')[0].style.opacity='0';
+  document.getElementsByClassName('link')[1].style.opacity='0';}, 300);
+}
+
+function onload_fade() {
+  document.getElementsByClassName('link')[0].style.opacity='0.4';
+  document.getElementsByClassName('link')[1].style.opacity='0.4';
 }

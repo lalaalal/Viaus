@@ -11,12 +11,15 @@ if (!isset($_SESSION['userid'])) {
     <title>VIAUS</title>
     <link rel="stylesheet" href="./css/style.css" type="text/css">
   </head>
-  <body>
+  <body onload="resize_comment()">
     <header>
-      <h1 class="title" onclick="hide_signin_area()">VIAUS</h1>
+      <div class="title_area">
+        <h1 class="title">VIAUS</h1>
+        <p class="comment">Welcome - <?php session_start(); printf("%s", $_SESSION['userid']); ?></p>
+      </div>
       <nav>
         <input type="button" class="link" value="About">
-        <input type="button" class="link" value="Sign Out" onclick="location.href='sign_out.php';">
+        <a class="link" href="sign_out.php" onclick="resize_comment()">Sign Out</a>
       </nav>
     </header>
   </body>

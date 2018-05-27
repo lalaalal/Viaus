@@ -38,6 +38,19 @@ header {
   overflow: hidden;
   padding: 50px 150px;
   min-height: 0;
+  min-width: 618px;
+}
+
+.title_area {
+  display: flex;
+  flex-direction: column;
+
+}
+.title_area:hover .comment {
+  transition-property: all;
+  transition-duration: 0.4s;
+  font-size: 0;
+  height: 0 !important;
 }
 
 .title {
@@ -58,14 +71,17 @@ header {
 }
 
 .comment {
+  transition-property: all;
+  transition-duration: 0.4s;
   font-family: sans-serif;
-  font-size: 25px;
+  font-size: 21px;
   text-align: center;
   color: white;
   opacity: 1;
   user-select: none;
   overflow: hidden;
   margin: 0;
+  height: 0;
 }
 
 nav {
@@ -80,13 +96,14 @@ nav {
   outline: 0;
   margin: 0;
   padding: 10px;
-  opacity: 0.4;
-  text-decoration: none;
+  opacity: 0;
   color: white;
   background-color: black;
   font-size: 30px;
   font-weight: normal;
   font-family: sans-serif;
+  text-decoration: none;
+  text-align: center;
   user-select: none;
   transition-property: all;
   transition-duration: 0.5s;
@@ -95,7 +112,7 @@ nav {
 .link:hover {
   transition-property: all;
   transition-duration: 0.5s;
-  opacity: 1;
+  opacity: 1 !important;
   /* font-size: 40px; */
 }
 

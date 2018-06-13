@@ -7,8 +7,7 @@ $mysqli = mysqli_connect("localhost", "root", "qhsxlsEndEl030", "user");
 $check = "SELECT * FROM account WHERE id='$id' AND pw='$pw'";
 $result = $mysqli->query($check);
 
-if ($result->num_rows==1)
-{
+if ($result->num_rows==1) {
   // $row = $result->fetch_array(MYSQLI_BOTH);
   $_SESSION['userid']=$id;
   if (isset($_SESSION['userid'])) {

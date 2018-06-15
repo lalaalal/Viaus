@@ -43,7 +43,6 @@ header {
 .title_area {
   display: flex;
   flex-direction: column;
-
 }
 .title_area:hover .comment {
   transition-property: all;

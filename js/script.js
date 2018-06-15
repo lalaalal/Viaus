@@ -47,6 +47,7 @@ function submit_fade() {
     hide_sign_area();
   }
   document.getElementsByTagName('nav')[0].style.opacity='0';
+  document.getElementsByClassName('title')[0].style.fontSize='100px';
 }
 
 function onload_fade() {

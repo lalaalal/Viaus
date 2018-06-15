@@ -16,7 +16,7 @@ if (!isset($_SESSION['userid'])) {
     <header>
       <div class="title_area">
         <h1 class="title">VIAUS</h1>
-        <p class="comment">Welcome - <?php session_start(); printf("%s", $_SESSION['userid']); ?></p>
+        <p class="comment">Welcome - <?php echo $_SESSION['userid']; ?></p>
       </div>
       <nav>
         <input type="button" class="link" value="About">

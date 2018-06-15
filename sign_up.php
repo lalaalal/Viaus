@@ -1,9 +1,9 @@
 <?php
 $id = $_POST['id'];
 $pw = $_POST['pw'];
-$mysqli = mysqli_connect("localhost", "root", "qhsxlsEndEl030", "user");
+$mysqli = mysqli_connect("localhost", "root", "qhsxlsEndEl030", "Viaus");
 
-$check = "SELECT * FROM account WHERE id='$id'";
+$check = "SELECT * FROM user_data WHERE id='$id'";
 $result = $mysqli->query($check);
 
 if ($id == NULL || $pw == NULL) {
@@ -16,7 +16,7 @@ if ($result->num_rows == 1) {
   exit();
 }
 
-$signup = mysqli_query($mysqli, "INSERT INTO account (id, pw) VALUES ('$id', '$pw')");
+$signup = mysqli_query($mysqli, "INSERT INTO user_data (id, pw, date) VALUES ('$id', '$pw', NOW())");
 if ($signup) {
   echo "sign up success";
 }

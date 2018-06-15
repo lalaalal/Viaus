@@ -10,6 +10,7 @@ if (!isset($_SESSION['userid'])) {
     <meta charset="utf-8">
     <title>VIAUS</title>
     <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <script src="./js/script.js"></script>
   </head>
   <body onload="resize_comment()">
     <header>
@@ -23,5 +24,4 @@ if (!isset($_SESSION['userid'])) {
       </nav>
     </header>
   </body>
-  <script src="./js/script.js"></script>
 </html>

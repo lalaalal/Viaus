@@ -3,8 +3,8 @@ session_start();
 $id = $_POST['id'];
 $pw = $_POST['pw'];
 
-$mysqli = mysqli_connect("localhost", "root", "qhsxlsEndEl030", "user");
-$check = "SELECT * FROM account WHERE id='$id' AND pw='$pw'";
+$mysqli = mysqli_connect("localhost", "root", "qhsxlsEndEl030", "Viaus");
+$check = "SELECT * FROM user_data WHERE id='$id' AND pw='$pw'";
 $result = $mysqli->query($check);
 
 if ($result->num_rows==1) {

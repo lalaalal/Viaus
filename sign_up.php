@@ -7,7 +7,7 @@ if ($id == NULL || $pw == NULL) {
   exit();
 }
 
-$mysqli = mysqli_connect("localhost", "root", "qhsxlsEndEl030", "Viaus");
+$mysqli = mysqli_connect("localhost", "viaus", "isdj_viaus", "viaus");
 $result = $mysqli->query("SELECT * FROM user_data WHERE id='$id'");
 
 if ($result->num_rows == 1) {

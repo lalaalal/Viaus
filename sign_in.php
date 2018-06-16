@@ -3,7 +3,7 @@ session_start();
 $id = $_POST['id'];
 $pw = $_POST['pw'];
 
-$mysqli = mysqli_connect("localhost", "root", "qhsxlsEndEl030", "Viaus");
+$mysqli = mysqli_connect("localhost", "viaus", "isdj_viaus", "viaus");
 $check = "SELECT * FROM user_data WHERE id='$id' AND pw='$pw'";
 $result = $mysqli->query($check);
 

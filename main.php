@@ -9,8 +9,9 @@ if (!isset($_SESSION['id'])) {
   <head>
     <meta charset="utf-8">
     <title>VIAUS</title>
-    <link rel="stylesheet" href="./css/style.css" type="text/css">
-    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="css/master.css" type="text/css">
+    <link rel="stylesheet" href="css/sign.css" type="text/css">
+    <script src="js/script.js"></script>
   </head>
   <body onload="resize_comment()">
     <header>

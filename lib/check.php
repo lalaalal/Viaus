@@ -6,4 +6,5 @@ function form_check($id, $pw) {
   }
   return true;
 }
+
 ?>

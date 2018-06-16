@@ -1,20 +1,18 @@
 <?php
-session_start();
-$id = $_POST['id'];
-$pw = $_POST['pw'];
+include 'lib/check.php';
+form_check($_POST['id'], $_POST['pw']);
 
 $mysqli = mysqli_connect("localhost", "viaus", "isdj_viaus", "viaus");
-$check = "SELECT * FROM user_data WHERE id='$id' AND pw='$pw'";
-$result = $mysqli->query($check);
+$query = "SELECT * FROM user_data WHERE id='{$_POST['id']}' AND pw='{$_POST['pw']}'";
+$result = $mysqli->query($query);
 
-if ($result->num_rows==1) {
-  $_SESSION['userid']=$id;
-  if (isset($_SESSION['userid'])) {
-    header('Location: main.php');
-  } else {
-    echo "session failed";
-    exit();
-  }
+if ($result->num_rows == 1) {
+  $row = mysqli_fetch_assoc($result);
+
+  session_start();
+  $_SESSION['id'] = $_POST['id'];
+  $_SESSION['no'] = $row['no'];
+  header('Location: main.php');
 } else {
   header('Location: index.html');
 }

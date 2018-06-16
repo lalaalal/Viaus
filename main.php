@@ -19,7 +19,7 @@ if (!isset($_SESSION['id'])) {
         <p class="comment">Welcome - <?=$_SESSION['id']?></p>
       </div>
       <nav>
-        <a class="link" href="withdraw.php" onclick="resize_comment()">ReSign</a>
+        <a class="link" href="resign.php" onclick="resize_comment()">ReSign</a>
         <a class="link" href="sign_out.php" onclick="resize_comment()">Sign Out</a>
       </nav>
     </header>

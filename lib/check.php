@@ -1,10 +1,11 @@
 <?php
-function form_check($id, $pw) {
-  if ($id == NULL || $pw == NULL) {
+function form_check($mysqli, $form) {
+  if ($form['id'] == NULL || $form['pw'] == NULL) {
     echo "empty forms";
     exit();
   }
-  return true;
+  $form['id'] = mysqli_real_escape_string($mysqli, $form['id']);
+  $form['pw'] = mysqli_real_escape_string($mysqli, $form['pw']);
+  return $form;
 }
-
 ?>

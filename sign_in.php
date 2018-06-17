@@ -1,9 +1,8 @@
 <?php
 include 'lib/check.php';
-form_check($_POST['id'], $_POST['pw']);
-
 $mysqli = mysqli_connect("localhost", "viaus", "isdj_viaus", "viaus");
-$query = "SELECT * FROM user_data WHERE id='{$_POST['id']}' AND pw='{$_POST['pw']}'";
+$F_POST = form_check($mysqli, $_POST);
+$query = "SELECT * FROM user_data WHERE id='{$F_POST['id']}' AND pw='{$F_POST['pw']}'";
 $result = $mysqli->query($query);
 
 if ($result->num_rows == 1) {

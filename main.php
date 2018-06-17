@@ -17,7 +17,7 @@ if (!isset($_SESSION['id'])) {
     <header>
       <div class="title_area">
         <h1 class="title">VIAUS</h1>
-        <p class="comment">Welcome - <?=$_SESSION['id']?></p>
+        <p class="comment">Welcome - <?=htmlspecialchars($_SESSION['id'])?></p>
       </div>
       <nav>
         <a class="link" href="resign.php" onclick="resize_comment()">ReSign</a>

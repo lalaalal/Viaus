@@ -11,8 +11,8 @@ if ($result->num_rows == 1) {
   session_start();
   $_SESSION['id'] = $_POST['id'];
   $_SESSION['no'] = $row['no'];
-  header('Location: main.php');
+  header('Location: index.php');
 } else {
-  header('Location: index.html');
+  header('Location: index.php');
 }
 ?>

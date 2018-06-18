@@ -4,7 +4,7 @@ session_unset();
 $res=session_destroy();
 if ($res) {
   sleep(1);
-  header ('Location: index.html');
+  header ('Location: index.php');
 } else {
   echo "session_destroy failed";
   exit();

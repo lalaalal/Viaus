@@ -12,7 +12,7 @@ if ($result->num_rows == 1) {
 $query = "INSERT INTO user_data (id, pw, date) VALUES ('{$_POST['id']}', '{$_POST['pw']}', NOW())";
 if ($mysqli->query($query)) {
   echo "sign up success";
-  header('Location: index.html');
+  header('Location: index.php');
 } else {
   echo "sign up failed";
 }

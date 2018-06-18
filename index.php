@@ -11,6 +11,7 @@
   <?php
   session_start();
   if (!isset($_SESSION['id'])) {
+    session_destroy();
     require('templete/sign.php');
   } else {
     require('templete/main.php');

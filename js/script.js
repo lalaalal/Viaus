@@ -1,14 +1,13 @@
-var signin_toggle = false;
-var signup_toggle = false;
+var signin_toggle = signup_toggle = false;
 
 function toggle_signin_area() {
   if (signin_toggle == false) {
     if (signup_toggle == true) toggle_signup_area();
-    document.getElementsByTagName('form')[0].style.height='77px';
+    $('form')[0].style.height = '77px';
     signin_toggle = true;
-    setTimeout(function() {document.getElementsByName('id')[0].focus();}, 700);
+    setTimeout(function() { $('input[name=id]')[0].focus(); }, 700);
   } else {
-    document.getElementsByTagName('form')[0].style.height='0';
+    $('form')[0].style.height = '0';
     signin_toggle = false;
   }
 }
@@ -16,41 +15,38 @@ function toggle_signin_area() {
 function toggle_signup_area() {
   if (signup_toggle == false) {
     if (signin_toggle == true) toggle_signin_area();
-    document.getElementsByTagName('form')[1].style.height='77px';
+    $('form')[1].style.height = '77px';
     signup_toggle = true;
-    setTimeout(function() {document.getElementsByName('id')[1].focus();}, 700);
+    setTimeout(function() { $('input[name=id]')[1].focus(); }, 700);
   } else {
-    document.getElementsByTagName('form')[1].style.height='0';
+    $('form')[1].style.height = '0';
     signup_toggle = false;
   }
 }
 
 function hide_sign_area() {
-  document.getElementsByTagName('form')[0].style.height='0';
-  document.getElementsByTagName('form')[1].style.height='0';
-  signin_toggle = false;
-  signup_toggle = false;
+  $('form').css('height', '0');
+  signin_toggle = signup_toggle = false;
 }
 
 function resize_comment() {
-  if (document.getElementsByClassName('comment')[0].style.height == 0) {
-    document.getElementsByClassName('comment')[0].style.height='28px';
+  if ($('.comment')[0].style.height == 0) {
+    $('.comment').css("height", "28px");
     onload_fade();
   } else {
-    document.getElementsByClassName('comment')[0].style.height='0';
+    $('.comment').css("height", "0");
     submit_fade();
   }
 }
 
 function submit_fade() {
-  if (document.getElementsByTagName('form').length != 0) {
+  if ($('form').length != 0) {
     hide_sign_area();
   }
-  document.getElementsByTagName('nav')[0].style.opacity='0';
-  document.getElementsByClassName('title')[0].style.fontSize='100px';
+  $('nav').css('opacity', '0');
+  $('.title').css('fontSize', '100px');
 }
 
 function onload_fade() {
-  document.getElementsByClassName('link')[0].style.opacity='0.4';
-  document.getElementsByClassName('link')[1].style.opacity='0.4';
+  $('.link').css('opacity', '0.4');
 }

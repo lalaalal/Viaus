@@ -1,5 +1,5 @@
 <?php
-include 'lib/check.php';
+include './lib/check.php';
 
 $mysqli = mysqli_connect("localhost", "viaus", "isdj_viaus", "viaus");
 $_POST = form_check($mysqli, $_POST);

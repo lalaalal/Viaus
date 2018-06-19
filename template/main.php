@@ -1,21 +1,20 @@
+<?php include './lib/check.php'; ?>
 <body onload="resize_comment()">
   <div id="whole_wrapper">
-    <header>
-      <div class="title_area">
-        <h1 class="title">VIAUS</h1>
-        <p class="comment">Welcome - <?= htmlspecialchars($_SESSION['id']) ?></p>
-      </div>
-      <nav>
-        <a class="link" href="list.php" onclick="resize_comment()">ReSign</a>
-        <a class="link" href="sign_out.php" onclick="resize_comment()">Sign Out</a>
-      </nav>
-    </header>
-    <!-- <main>
+    <?php
+    if (!isset($_GET['no']) || $_GET['no'] == 0) {
+      require("welcome.php");
+    } else {
+      $post = get_post($_GET['no']);
+    }
+    ?>
+    <main>
       <button class="arrow">&#xf104;</button>
-      <article class="">
-
+      <article class="post">
+        <h1 class="title"><?= $post['title'] ?></h1>
+        <div class="txt"><?= $post['body'] ?></div>
       </article>
       <button class="arrow">&#xf105;</button>
-    </main> -->
+    </main>
   </div>
 </body>

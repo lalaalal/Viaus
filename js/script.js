@@ -43,6 +43,9 @@ function submit_fade() {
   if ($('form').length != 0) {
     hide_sign_area();
   }
+  if ($('main').length != 0) {
+    $('main').css('opacity', '0');
+  }
   $('nav').css('opacity', '0');
   $('.title').css('fontSize', '100px');
 }

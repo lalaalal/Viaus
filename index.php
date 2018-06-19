@@ -16,7 +16,7 @@ if (!isset($_SESSION['id'])) {
   <link rel="stylesheet" href="./css/fontello.css">
   <link rel="stylesheet" href="./css/<?= $proc ?>.css">
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  <script src="js/index_ani.js"></script>
+  <script src="js/script.js"></script>
 </head>
   <?php
   require("./template/$proc.php");

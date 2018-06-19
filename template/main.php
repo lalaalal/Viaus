@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="./css/main.css">
 <body onload="resize_comment()">
   <div id="whole_wrapper">
     <header>

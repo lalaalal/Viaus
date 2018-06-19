@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="./css/sign.css">
 <body onload="onload_fade()">
   <div id="whole_wrapper">
     <header>

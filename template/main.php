@@ -3,18 +3,16 @@
   <div id="whole_wrapper">
     <?php
     if (!isset($_GET['no']) || $_GET['no'] == 0) {
+      $_GET['no'] = 0;
       require("welcome.php");
     } else {
       $post = get_post($_GET['no']);
+      require("post.php");
     }
     ?>
-    <main>
-      <button class="arrow">&#xf104;</button>
-      <article class="post">
-        <h1 class="title"><?= $post['title'] ?></h1>
-        <div class="txt"><?= $post['body'] ?></div>
-      </article>
-      <button class="arrow">&#xf105;</button>
-    </main>
+    <div id="arrow_area">
+      <button class="arrow" onclick="view_post('prev', <?= $_GET['no'] ?>)">&#xf104;</button>
+      <button class="arrow" onclick="view_post('next', <?= $_GET['no'] ?>)">&#xf105;</button>
+    </div>
   </div>
 </body>

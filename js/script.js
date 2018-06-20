@@ -47,9 +47,14 @@ function submit_fade() {
     $('main').css('opacity', '0');
   }
   $('nav').css('opacity', '0');
-  $('.title').css('fontSize', '100px');
+
+  $('.headline').css('fontSize', '100px');
 }
 
 function onload_fade() {
   $('.link').css('opacity', '0.4');
+}
+
+function view_post(move, no) {
+  location.href = "./move_board.php?move=" + move + "&no=" + no;
 }

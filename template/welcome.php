@@ -1,6 +1,6 @@
 <header>
-  <div class="title_area">
-    <h1 class="title">VIAUS</h1>
+  <div id="title_area">
+    <h1 class="headline">VIAUS</h1>
     <p class="comment">Welcome - <?= htmlspecialchars($_SESSION['id']) ?></p>
   </div>
   <nav>

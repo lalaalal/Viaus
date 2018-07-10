@@ -54,7 +54,3 @@ function submit_fade() {
 function onload_fade() {
   $('.link').css('opacity', '0.4');
 }
-
-function view_post(move, no) {
-  location.href = "./move_board.php?move=" + move + "&no=" + no;
-}

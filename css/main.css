@@ -18,7 +18,7 @@
 .comment {
   transition-property: all;
   transition-duration: 0.4s;
-  font-family: sans-serif;
+  font-family: Noto Sans CJK KR, sans-serif;
   font-size: 21px;
   text-align: center;
   color: white;

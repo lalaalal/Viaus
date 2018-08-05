@@ -40,7 +40,7 @@ body {
 
 .headline {
   transition-duration: 0.4s;
-  font-family: sans-serif;
+  font-family: Noto Sans CJK KR, sans-serif;
   font-size: 100px;
   color: white;
   opacity: 1;
@@ -78,7 +78,8 @@ nav {
   opacity: 0;
   color: white;
   background-color: black;
-  font: 30px normal sans-serif;
+  font-size: 30px;
+  font-family: Noto Sans CJK KR, sans-serif;
   text-align: center;
   text-decoration: none;
   user-select: none;

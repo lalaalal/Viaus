@@ -12,6 +12,7 @@
 .sign .input_area {
   display: flex;
   flex-direction: column;
+  /* justify-content: space-between; */
 }
 
 .sign input {
@@ -20,8 +21,9 @@
   color: white;
   border: 0;
   outline: 0;
-  padding: 10px;
-  font-size: 16px;
+  padding: 8px;
+  font-size: 15px;
+  font-family: Noto Sans CJK KR, sans-serif;
   background-color: black;
   opacity: 0.6;
 }

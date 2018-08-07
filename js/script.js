@@ -3,7 +3,7 @@ var signin_toggle = signup_toggle = false;
 function toggle_signin_area() {
   if (signin_toggle == false) {
     if (signup_toggle == true) toggle_signup_area();
-    $('form')[0].style.height = '77px';
+    $('form')[0].style.height = '78px';
     signin_toggle = true;
     setTimeout(function() { $('input[name=id]')[0].focus(); }, 700);
   } else {
@@ -15,7 +15,7 @@ function toggle_signin_area() {
 function toggle_signup_area() {
   if (signup_toggle == false) {
     if (signin_toggle == true) toggle_signin_area();
-    $('form')[1].style.height = '77px';
+    $('form')[1].style.height = '78px';
     signup_toggle = true;
     setTimeout(function() { $('input[name=id]')[1].focus(); }, 700);
   } else {

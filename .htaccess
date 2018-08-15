@@ -1,4 +1,0 @@
-RewriteEngine On
-
-RewriteCond %{REQUEST_URI}  ^/images/([^/]) [NC]
-RewriteRule ^/images/([^/]) - [F]

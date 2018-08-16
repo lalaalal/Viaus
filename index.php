@@ -12,6 +12,7 @@ if (!isset($_SESSION['id'])) {
   <head>
     <meta charset="utf-8">
     <title>VIAUS</title>
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
     <link rel="stylesheet" href="./css/master.css" type="text/css">
     <link rel="stylesheet" href="./css/<?= $proc ?>.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>

@@ -4,8 +4,8 @@ USE viaus;
 
 CREATE TABLE user_data (
   `no` INT NOT NULL AUTO_INCREMENT,
-  `id` CHAR(16) NOT NULL,
-  `pw` CHAR(16) NOT NULL,
+  `id` VARCHAR(24) NOT NULL,
+  `pw` VARCHAR(64) NOT NULL,
   `name` CHAR(16) NULL,
   `sex` CHAR(5) NULL,
   `date` DATETIME NOT NULL DEFAULT NOW(),

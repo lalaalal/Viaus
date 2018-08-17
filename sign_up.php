@@ -12,7 +12,7 @@ if ($result->num_rows == 1) {
 }
 
 $hashed_pw = password_hash($_POST['pw'], PASSWORD_DEFAULT);
-$query = "INSERT INTO user_data (id, pw) VALUES ('{$_POST['id']}', '{$hashed_pw}')";
+$query = "INSERT INTO user (id, pw) VALUES ('{$_POST['id']}', '{$hashed_pw}')";
 if ($mysqli->query($query)) {
   echo "sign up success";
   header('Location: index.php');

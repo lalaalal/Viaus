@@ -4,7 +4,7 @@ include './lib/check.php';
 $mysqli = mysqli_connect("localhost", "viaus", "isdj_viaus", "viaus");
 $_POST = form_check($mysqli, $_POST);
 
-$query = "SELECT * FROM user_data WHERE BINARY id='{$_POST['id']}'";
+$query = "SELECT * FROM user WHERE BINARY id='{$_POST['id']}'";
 $result = $mysqli->query($query);
 if ($result->num_rows == 1) {
   echo "already exist";

@@ -2,7 +2,7 @@ CREATE DATABASE viaus;
 
 USE viaus;
 
-CREATE TABLE user_data (
+CREATE TABLE user (
   `no` INT NOT NULL AUTO_INCREMENT,
   `id` VARCHAR(24) NOT NULL,
   `pw` VARCHAR(64) NOT NULL,

@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 * {
+  font-family: 'Abel', sans-serif;
   box-sizing: border-box;
   transition: all 0.5s;
 }
@@ -39,7 +40,6 @@ body {
 
 .headline {
   transition-duration: 0.4s;
-  font-family: 'Abel', sans-serif;
   font-size: 100px;
   color: white;
   opacity: 1;
@@ -78,7 +78,6 @@ nav {
   color: white;
   background-color: black;
   font-size: 30px;
-  font-family: 'Abel', sans-serif;
   text-align: center;
   text-decoration: none;
   user-select: none;

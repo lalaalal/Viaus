@@ -23,7 +23,6 @@
   outline: 0;
   padding: 8px;
   font-size: 18px;
-  font-family: 'Abel', sans-serif;
   background-color: black;
   opacity: 0.6;
 }
@@ -38,7 +37,6 @@
   transition-duration: 0.5s;
   opacity: 0.3;
   background-color: black;
-  font-family: 'Abel', sans-serif;
   font-size: 20px;
   user-select: none;
   text-align: center;

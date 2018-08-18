@@ -38,6 +38,15 @@ body {
   min-width: 590px;
 }
 
+#title_area {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 165px; */
+}
+
 .headline {
   transition-duration: 0.4s;
   font-size: 100px;

@@ -1,13 +1,5 @@
 @charset "UTF-8";
 
-#title_area {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* min-height: 165px; */
-}
 #title_area:hover .comment {
   transition-property: all;
   transition-duration: 0.5s;
@@ -26,4 +18,5 @@
   overflow: hidden;
   margin: 0;
   height: 0;
+  /* font-family: 'Abel', sans-serif; */
 }

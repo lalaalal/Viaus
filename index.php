@@ -2,9 +2,13 @@
 session_start();
 if (!isset($_SESSION['id'])) {
   session_destroy();
-  $proc = 'sign';
+  $req = 'sign';
 } else {
-  $proc = 'main';
+  if (!isset($_GET['req'])) {
+    $req = 'main';
+  } else {
+    $req = $_GET['req'];
+  }
 }
 ?>
 <!DOCTYPE html>
@@ -14,9 +18,9 @@ if (!isset($_SESSION['id'])) {
     <title>VIAUS</title>
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
     <link rel="stylesheet" href="./css/master.css" type="text/css">
-    <link rel="stylesheet" href="./css/<?= $proc ?>.css">
+    <link rel="stylesheet" href="./css/<?= $req ?>.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="./js/script.js"></script>
   </head>
-<?php require("./body/$proc.php"); ?>
+<?php require("./body/$req.php"); ?>
 </html>

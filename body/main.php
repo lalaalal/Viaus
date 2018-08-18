@@ -6,8 +6,8 @@
           <p class="comment">Welcome - <?= htmlspecialchars($_SESSION['id']) ?></p>
         </div>
         <nav>
-          <a class="link" href="my_page.php" onclick="resize_comment()">My Page</a>
-          <a class="link" href="sign_out.php" onclick="resize_comment()">Sign Out</a>
+          <input type="button" class="link" value="My Page" onclick="resize_comment('my_page.php')">
+          <input type="button" class="link" value="Sign Out" onclick="resize_comment('sign_out.php')">
         </nav>
       </header>
     </div>

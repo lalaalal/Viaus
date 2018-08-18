@@ -29,7 +29,7 @@ function hide_sign_area() {
   signin_toggle = signup_toggle = false;
 }
 
-function resize_comment() {
+function resize_comment(link) {
   if ($('.comment')[0].style.height == 0) {
     $('.comment').css("height", "28px");
     onload_fade();
@@ -37,17 +37,19 @@ function resize_comment() {
     $('.comment').css("height", "0");
     submit_fade();
   }
+  if (link != null) {
+    location.href=link;
+  }
 }
 
 function submit_fade() {
   if ($('form').length != 0) {
     hide_sign_area();
   }
-  if ($('main').length != 0) {
-    $('main').css('opacity', '0');
-  }
+  // if ($('main').length != 0) {
+  //   $('main').css('opacity', '0');
+  // }
   $('nav').css('opacity', '0');
-
   $('.headline').css('fontSize', '100px');
 }
 

@@ -10,8 +10,6 @@ if (!isset($_SESSION['id'])) {
 
 echo "no: ".$_SESSION['no']."<br>";
 echo "id: ".$_SESSION['id']."<br>";
-echo "name: ".$_SESSION['name']."<br>";
-echo "sex: ".$_SESSION['sex']."<br>";
 echo "class: ".$_SESSION['class']."<br>";
 
 echo '<a href="index.php">return</a><br>';

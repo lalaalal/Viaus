@@ -13,12 +13,8 @@ if ($result->num_rows == 1) {
     session_start();
     $_SESSION['no'] = $row['no'];
     $_SESSION['id'] = $_POST['id'];
-    $_SESSION['name'] = $row['name'];
-    $_SESSION['sex'] = $row['sex'];
     $_SESSION['class'] = $row['class'];
-    header('Location: index.php');
   }
-} else {
-  header('Location: index.php');
 }
+header('Location: index.php');
 ?>
